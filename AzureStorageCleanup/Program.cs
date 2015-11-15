@@ -44,6 +44,7 @@ namespace AzureStorageCleanup
             
             StorageCleaner storageCleaner = new StorageCleaner(storageAccountName, storageAccessKey, containerName, minDaysOld, recursive);
             storageCleaner.Cleanup();
+			storageCleaner.SetMimeTypes();
         }
 
         private static void WriteHelpToConsole()
